@@ -1,13 +1,10 @@
 import {getHome} from "../../../../api/home.js";
-import MySwiper, {InnerSwiper} from "./MySwiper.jsx";
+import MySwiper from "./MySwiper.jsx";
 
 const Slider = () => {
     const {data} = getHome();
     return <div className={'relative'}>
         <MySwiper/>
-        <div className={'lg:absolute lg:top-5 lg:right-0 max-lg:invisible'}>
-            <InnerSwiper/>
-        </div>
     </div>
 }
 
