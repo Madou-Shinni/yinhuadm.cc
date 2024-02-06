@@ -2,6 +2,7 @@ import {getHome} from "../../api/home.js";
 import Loading from "../base/loading/Loading.jsx";
 import ErrorBlock from "../base/error-block/ErrorBlock.jsx";
 import Header from "./cpn/header/Header.jsx";
+import Main from "./cpn/main/Main.jsx";
 
 const Home = () => {
     const {data,error,isLoading} = getHome()
@@ -9,6 +10,7 @@ const Home = () => {
     if (error) return <ErrorBlock />
     return <div className={'container margin-y-auto mt-[64px] p-[20px]'}>
         <Header/>
+        <Main/>
     </div>
 }
 
