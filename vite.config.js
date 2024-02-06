@@ -9,4 +9,13 @@ export default defineConfig({
       '@': '/src',
     }
   },
+  server: {
+    proxy: {
+      // 代理所有`/api`的请求
+      '/api': {
+        target: 'http://127.0.0.1:8080',
+        rewrite: (path) => path.replace(/^\/api/, ''),
+      }
+    },
+  }
 })
