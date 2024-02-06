@@ -3,7 +3,16 @@ import {getHome} from "../../../../api/home.js";
 
 const MySwiper = () => {
     const {data} = getHome();
-    return <Swiper spaceBetween={50} autoplay className={'rounded-[8px] leading-normal relative'}>
+
+    const onSliderChangeHandle = (v) => {
+        console.log('slide change',v);
+    }
+
+
+    return <Swiper spaceBetween={50} autoplay
+                   onSlideChange={onSliderChangeHandle}
+                   className={'rounded-[8px] leading-normal relative'}
+    >
         {data?.banners?.map((item,index)=>(
             <SwiperSlide key={item.detailId} className={'rounded-[8px]'}>
                 <a className={`block h-[28vw] bg-center bg-no-repeat bg-cover rounded-[8px]`}
@@ -15,7 +24,7 @@ const MySwiper = () => {
                     lg:hidden
                 `}>
                     <div className={'title'}>
-                        <h1>{item.title}</h1>
+                        <h1 className={'text-2xl font-bold'}>{item.title}</h1>
                     </div>
                     <p>{item.status}</p>
                     <p className={'one-lines-ellipsis'}>{item.description}</p>
@@ -35,7 +44,7 @@ const InnerSwiper = () => {
                         <img width={'100%'} height={'100%'} className={'h-full rounded-[8px] object-cover'} src={item.cover} alt=""/>
                     </div>
                     <div className={'title'}>
-                        <h1>{item.title}</h1>
+                        <h1 className={'text-2xl font-bold'}>{item.title}</h1>
                     </div>
                 </a>
                 <div className={'intr text-m text-gray-300'}>

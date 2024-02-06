@@ -5,7 +5,7 @@ const Slider = () => {
     const {data} = getHome();
     return <div className={'relative'}>
         <MySwiper/>
-        <div className={'lg:absolute lg:top-5 lg:right-0 max-lg:hidden'}>
+        <div className={'lg:absolute lg:top-5 lg:right-0 max-lg:invisible'}>
             <InnerSwiper/>
         </div>
     </div>
