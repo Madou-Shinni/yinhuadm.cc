@@ -14,7 +14,9 @@ const MySwiper = () => {
 
     const renderInnerSwiper = () => (
         <div className={'lg:absolute lg:top-5 lg:right-10 max-lg:invisible'}>
-            <Swiper spaceBetween={50} autoplay className={`rounded-[8px]`} style={{width:'187px'}}
+            <Swiper spaceBetween={50} autoplay={{delay: 2500}}
+                    className={`rounded-[8px]`}
+                    style={{width:'187px'}}
                     modules={[Controller]}
                     onSwiper={setInnerSwiper}
                     controller={{control: outerSwiper}}
@@ -52,7 +54,8 @@ const MySwiper = () => {
 
 
     return <>
-        <Swiper spaceBetween={50} autoplay
+        <Swiper spaceBetween={50}
+                autoplay={{delay: 2500}}
                 modules={[Controller]}
                 onSwiper={setOuterSwiper}
                 controller={{control: innerSwiper}}
