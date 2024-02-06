@@ -13,7 +13,7 @@ const MySwiper = () => {
     const [innerSwiper, setInnerSwiper] = useState(null);
 
     const renderInnerSwiper = () => (
-        <div className={'lg:absolute lg:top-5 lg:right-10 max-lg:invisible'}>
+        <div className={'absolute top-5 right-10 max-lg:invisible'}>
             <Swiper spaceBetween={50}
                     autoplay={{
                         delay: 2500,

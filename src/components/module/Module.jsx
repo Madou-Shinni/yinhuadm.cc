@@ -4,7 +4,7 @@ import Main from "./cpn/main/Main.jsx";
 const Module = (props) => {
     return <div className={'container'}>
         <Header name={props.name} tabs={props.tabs} />
-        <Main/>
+        <Main data={props.data}/>
     </div>
 }
 

@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      screens: {
+        // '3xl': {'max': '1789px'},
+      },
       fontSize: {
         's': '12px',
         'm': '14px',

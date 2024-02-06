@@ -6,7 +6,7 @@ const Main = () => {
     return <div className={'container'}>
         {
             data?.modules?.map((module) => {
-                return <Module key={module.name} name={module.name} tabs={module.tabs} />
+                return <Module key={module.name} name={module.name} tabs={module.tabs} data={module.contentList} />
             })
         }
     </div>
