@@ -1,7 +1,7 @@
 import {Swiper, SwiperSlide} from "swiper/react";
 import {getHome} from "../../../../api/home.js";
 import {useState} from "react";
-import {Controller} from "swiper/modules";
+import {Autoplay, Controller} from "swiper/modules";
 import ArrowForwardIosRoundedIcon from '@mui/icons-material/ArrowForwardIosRounded';
 import ArrowBackIosRoundedIcon from '@mui/icons-material/ArrowBackIosRounded';
 
@@ -14,10 +14,14 @@ const MySwiper = () => {
 
     const renderInnerSwiper = () => (
         <div className={'lg:absolute lg:top-5 lg:right-10 max-lg:invisible'}>
-            <Swiper spaceBetween={50} autoplay={{delay: 2500}}
+            <Swiper spaceBetween={50}
+                    autoplay={{
+                        delay: 2500,
+                        disableOnInteraction: false,
+                    }}
                     className={`rounded-[8px]`}
                     style={{width:'187px'}}
-                    modules={[Controller]}
+                    modules={[Controller,Autoplay]}
                     onSwiper={setInnerSwiper}
                     controller={{control: outerSwiper}}
             >
@@ -55,8 +59,11 @@ const MySwiper = () => {
 
     return <>
         <Swiper spaceBetween={50}
-                autoplay={{delay: 2500}}
-                modules={[Controller]}
+                autoplay={{
+                    delay: 2500,
+                    disableOnInteraction: false,
+                }}
+                modules={[Controller,Autoplay]}
                 onSwiper={setOuterSwiper}
                 controller={{control: innerSwiper}}
                 className={'rounded-[8px] leading-normal relative'}
