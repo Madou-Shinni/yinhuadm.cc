@@ -7,7 +7,13 @@
 * item的宽度 = (100% - (cols - 1) * gap) / cols
 * */
 
+import {useNavigate} from "react-router-dom";
+
 const Video = ({id, cover, note, title,...props}) => {
+    const navigate = useNavigate();
+    const onGoVideoHandle = () => {
+        navigate(`/video/${id}`);
+    }
     return <div className={`item
             w-[calc((100%-(9-1)*1.25rem)/9)]
             max-md:w-[calc((100%-(4-1)*1.25rem)/4)]
@@ -15,7 +21,10 @@ const Video = ({id, cover, note, title,...props}) => {
             max-2xl:w-[calc((100%-(6-1)*1.25rem)/6)]
             max-3xl:w-[calc((100%-(7-1)*1.25rem)/7)]
             ${props.className || ''}
-    `}>
+            cursor-pointer
+        `}
+        onClick={onGoVideoHandle}
+    >
         <div className={`cover relative pt-[140%]`}>
             <div className={`cover`}>
                 <img src={cover} alt={title} className={'absolute top-0 left-0 w-full h-full object-cover rounded-[8px]'}/>

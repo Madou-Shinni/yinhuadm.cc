@@ -19,7 +19,7 @@ const Router = React.memo(()=>{
                 element: <Search/>
             },
             {
-                path:'/book/:id',
+                path:'/video/:id',
                 element: <Detail/>
             },
             {
