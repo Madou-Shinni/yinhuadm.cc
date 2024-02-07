@@ -1,10 +1,19 @@
+/*
+* 让flex内部盒子充满盒子内部的计算方法
+* 1. 计算每个item的宽度
+*    减去间距后再除以每行的盒子数量
+* cols: 你希望排几列
+* gap: 间距
+* item的宽度 = (100% - (cols - 1) * gap) / cols
+* */
+
 const Video = ({id, cover, note, title}) => {
     return <div className={`item
-            w-[calc(12%-18px)]
-            max-md:w-[calc(25%-18px)]
-            max-lg:w-[calc(20%-18px)]
-            max-2xl:w-[calc(16%-18px)]
-            max-3xl:w-[calc(14%-18px)]
+            w-[calc((100%-(9-1)*1.25rem)/9)]
+            max-md:w-[calc((100%-(4-1)*1.25rem)/4)]
+            max-lg:w-[calc((100%-(5-1)*1.25rem)/5)]
+            max-2xl:w-[calc((100%-(6-1)*1.25rem)/6)]
+            max-3xl:w-[calc((100%-(7-1)*1.25rem)/7)]
     `}>
         <div className={`cover relative pt-[140%]`}>
             <div className={`cover`}>
