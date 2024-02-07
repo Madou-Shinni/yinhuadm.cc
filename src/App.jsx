@@ -6,6 +6,7 @@ import {Provider} from "react-redux";
 import {store} from "./store/store.js";
 
 function App() {
+    document.title = 'ricardo の 动漫之家'
 
   return (
 
