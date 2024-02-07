@@ -6,6 +6,7 @@ const Home = lazy(()=>import('@/pages/home/Home.jsx'));
 const Detail = lazy(()=>import('@/pages/detail/Detail.jsx'));
 const Search = lazy(()=>import('@/pages/search/Search.jsx'));
 const More = lazy(()=>import('@/pages/more/More.jsx'));
+const Play = lazy(()=>import('@/pages/play/Play.jsx'));
 
 const Router = React.memo(()=>{
     const element = useRoutes(
@@ -21,6 +22,10 @@ const Router = React.memo(()=>{
             {
                 path:'/video/:id',
                 element: <Detail/>
+            },
+            {
+                path:'/play/:id/:sid/:nid',
+                element: <Play/>
             },
             {
                 path:'/more/:key',
