@@ -3,7 +3,7 @@ const Tag = (props) => {
         props?.onClick?.(props.children);
     }
 
-    return <div className={`hover:text-pink-300 bg-white border border-solid border-[#e9ecef] rounded-[8px] px-[5px] cursor-pointer`}
+    return <div className={`hover:text-pink-300 bg-white border border-solid border-[#e9ecef] rounded-[8px] px-[5px] cursor-pointer ${props.className}`}
                 onClick={onHandleClick}
     >
         {props.children}
