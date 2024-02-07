@@ -1,6 +1,12 @@
 import styles from './Content.module.scss';
+import {useParams} from "react-router-dom";
+import {getVideo} from "../../../../../api/detail.js";
+import {formatDate} from "../../../../../utils/date.js";
 
 const InfoContent = () => {
+    const {id} = useParams();
+    const {data} = getVideo({id});
+
     return <div className={`bg-white p-[25px] sm:min-h-[253px] ${styles.content}`}>
         <div className={`flex pb-[5px] text-m`}>
             <div className={`intro max-h-[44px] ${styles['info-introduction']}`}>
@@ -9,28 +15,34 @@ const InfoContent = () => {
         </div>
         <div className={'flex pb-[5px] text-m'}>
             <span className={'mr-[8px] font-bold'}>导演: </span>
-            <div>中重俊祐</div>
+            <div>{data?.director}</div>
         </div>
         <div className={'flex pb-[5px] text-m'}>
             <span className={'mr-[8px] font-bold'}>编剧: </span>
-            <div>中重俊祐</div>
+            <div>{data?.screenwriter}</div>
         </div>
         <div className={'flex pb-[5px] text-m'}>
             <span className={'mr-[8px] font-bold'}>主演: </span>
-            <div>坂泰斗/中村源太/三川华月/上田丽奈/平川大辅/东地宏树</div>
+            <div>
+                {data?.starrings?.map((item, index) =>
+                    <span key={index}>
+                        <span>{item}</span>
+                        <span className={'px-[7px] text-[#c2c6d0] text-s'}></span>
+                    </span>)}
+            </div>
         </div>
         <div className={'flex pb-[5px] text-m'}>
             <span className={'mr-[8px] font-bold'}>更新: </span>
-            <div>2024-02-05</div>
+            <div>{formatDate(data?.updateAt)}</div>
         </div>
         <div className={'flex pb-[5px] text-m'}>
             <span className={'mr-[8px] font-bold'}>片长: </span>
-            <div>更新至第05集</div>
+            <div>{data?.note}</div>
         </div>
-        <div className={'flex pb-[5px] text-m text-green-600'}>
-            <span className={'mr-[8px] font-bold'}>豆瓣: </span>
-            <div>我独自升级</div>
-        </div>
+        {/*{data?.thirdlink?.title && <div className={'flex pb-[5px] text-m text-green-600'}>*/}
+        {/*    <span className={'mr-[8px] font-bold'}>豆瓣: </span>*/}
+        {/*    <div>{}</div>*/}
+        {/*</div>}*/}
     </div>
 }
 

@@ -1,11 +1,16 @@
 import Tag from "../../../../../components/Tag.jsx";
+import {useParams} from "react-router-dom";
+import {getVideo} from "../../../../../api/detail.js";
 
 const InfoHeader = () => {
+    const {id} = useParams();
+    const {data} = getVideo({id});
+
     return <div className={'w-full mt-25px'}>
-        <h1 className={'text-3xl font-bold leading-normal'}>我肚子升级</h1>
-        <div className={'tags flex'}>
+        <h1 className={'text-3xl font-bold leading-normal'}>{data?.title}</h1>
+        <div className={'tags flex gap-1'}>
             {
-                ['肚子','升级'].map((item, index) => <Tag key={index}>{item}</Tag>)
+                data?.tags?.map((item, index) => <Tag key={index}>{item}</Tag>)
             }
         </div>
     </div>

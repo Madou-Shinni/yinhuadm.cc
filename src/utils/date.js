@@ -11,3 +11,18 @@ export const getCurrentDate = () => {
 
     return currentDayText;
 }
+
+export const formatDate = (date) => {
+    // 将字符串转换为日期对象
+    const dateObject = new Date(date);
+
+    // 获取年、月和日
+    const year = dateObject.getFullYear();
+    const month = ("0" + (dateObject.getMonth() + 1)).slice(-2); // 加1是因为月份是从0开始计数的，slice(-2)用于保证月份是两位数
+    const day = ("0" + dateObject.getDate()).slice(-2); // slice(-2)用于保证日是两位数
+
+// 拼接年、月和日成为指定格式的字符串
+    const formattedDate = year + "-" + month + "-" + day;
+
+    return formattedDate;
+}
