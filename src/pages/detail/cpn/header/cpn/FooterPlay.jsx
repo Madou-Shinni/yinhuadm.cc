@@ -1,14 +1,18 @@
 import PlayArrowRoundedIcon from '@mui/icons-material/PlayArrowRounded';
 import {useNavigate, useParams} from "react-router-dom";
 import {getVideo} from "../../../../../api/detail.js";
+import {useDispatch} from "react-redux";
+import {setPlayVideo} from "../../../../../store/slices/play.js";
 
 const FooterPlay = () => {
     const {id} = useParams();
     const {data} = getVideo({id});
     const navigate = useNavigate();
+    const dispatch = useDispatch();
 
     const onClick = () => {
         const {episode,playLine}  = data?.episodeList?.[0]
+        dispatch(setPlayVideo(data))
         navigate(`/play/${id}/${playLine}/${episode}`)
     }
 
