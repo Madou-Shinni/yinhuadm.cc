@@ -20,7 +20,7 @@ const Video = ({id, cover, note, title,...props}) => {
             <div className={`cover`}>
                 <img src={cover} alt={title} className={'absolute top-0 left-0 w-full h-full object-cover rounded-[8px]'}/>
             </div>
-            <div className={`note absolute left-1/2 translate-x-1/2 bottom-3 text-white one-lines-ellipsis`}>
+            <div className={`note absolute left-1/2 -translate-x-1/2 bottom-3 text-white text-s one-lines-ellipsis`}>
                 {note}
             </div>
         </div>
