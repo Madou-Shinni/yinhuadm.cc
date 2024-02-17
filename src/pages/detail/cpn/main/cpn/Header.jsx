@@ -8,7 +8,7 @@ const Header = () => {
     const handleChange = (event, newValue) => {
         dispatch(setActivePlayLine(newValue));
     }
-    return <div className={'flex justify-between'}>
+    return <div className={'flex mt-[8px] max-sm:flex-col justify-between'}>
         <h2 className={'text-2xl font-bold'}>选集播放</h2>
         <div className={'tabs'}>
             <Tabs

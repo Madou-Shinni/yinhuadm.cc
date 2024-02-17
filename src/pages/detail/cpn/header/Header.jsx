@@ -3,7 +3,7 @@ import Info from "./cpn/Info.jsx";
 
 const Header = () => {
     return <div className={'w-full'}>
-        <Cover/>
+        <Cover className={'max-sm:hidden'}/>
         <Info/>
     </div>
 }

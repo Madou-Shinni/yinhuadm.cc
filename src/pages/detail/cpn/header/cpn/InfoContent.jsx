@@ -9,8 +9,8 @@ const InfoContent = () => {
 
     return <div className={`bg-white p-[25px] sm:min-h-[253px] ${styles.content}`}>
         <div className={`flex pb-[5px] text-m`}>
-            <div className={`intro max-h-[44px] ${styles['info-introduction']}`}>
-                <p>10 年前，世界与其他次元链接的“门”被打开，各种魔物不断出现，于是乎能力各异的猎魔者也随之出现，被称为“猎人”。程肖宇是一名实力最弱的 E 级猎人，在一次挑战任务中，遇到了可怕</p>
+            <div className={`${styles.intro} max-h-[44px] overflow-hidden ${styles['info-introduction']}`}>
+                <p>{data?.introduction}</p>
             </div>
         </div>
         <div className={'flex pb-[5px] text-m'}>

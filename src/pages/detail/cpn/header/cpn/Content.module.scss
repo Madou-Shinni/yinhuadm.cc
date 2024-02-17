@@ -1,19 +1,36 @@
 .content {
   .info-introduction {
-    position: relative;
     width: 100%;
-    padding-bottom: 15px;
     margin-bottom: 20px;
 
-    &:after {
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: 0;
+    p {
+      position: relative;
       width: 100%;
-      height: 1px;
-      background-color: #f1f3f5;
-      transform: translateY(15px);
+      padding-bottom: 15px;
+      margin-bottom: 20px;
+
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 1px;
+        background-color: #f1f3f5;
+      }
+    }
+  }
+
+  .intro {
+    overflow: hidden; /* 先隐藏超出部分 */
+    text-overflow: ellipsis; /* 超出部分显示省略号 */
+  }
+
+  @media (max-width: 640px) {
+    .intro {
+      -webkit-line-clamp: 2; /* 小屏幕时显示两行 */
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
     }
   }
 }
