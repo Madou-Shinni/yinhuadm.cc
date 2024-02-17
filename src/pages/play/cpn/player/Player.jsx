@@ -1,4 +1,4 @@
-import {getPlay} from "../../../../api/play.js";
+import {getPlay, updatePlay} from "../../../../api/play.js";
 import Loading from "../../../base/loading/Loading.jsx";
 import ErrorBlock from "../../../base/error-block/ErrorBlock.jsx";
 import {useParams} from "react-router-dom";
@@ -14,11 +14,16 @@ const Player = () => {
     });
     const {data:video,isLoading:videoLoading} = getVideo({id});
 
-    // const video = useSelector(state => state.play.playVideo);
+    // 先更新
+    updatePlay({
+        videoId: id,
+        playLine: sid,
+        episodeId: nid
+    });
 
     useEffect(()=>{
         document.title = `${video?.title} - 第${nid}集`;
-    },[video])
+    },[data])
 
     if (videoLoading) {
         return <Loading/>
@@ -32,7 +37,7 @@ const Player = () => {
 
     return <div className={'w-full h-[50vh] min-h-[300px] min-w-[360px] flex-grow'}>
         <iframe border="0" src={
-            `https://player.mcue.cc/yinhua/?url=${data?.url}&next=${!data.url_next ? '' : window.location.protocol + '//' + window.location.host + data?.link_next}&title=${video?.title}`
+            `https://player.mcue.cc/yinhua/?url=${data?.url}&next=${!data.url_next ? '' : window.location.protocol + '//' + window.location.host + data?.link_next}&title=${video?.title+' - 第'+nid+'集'}`
         }
                 width="100%"
                 height="100%"

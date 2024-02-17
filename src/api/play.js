@@ -7,3 +7,11 @@ export const getPlay = (params) => {
         params
     })
 }
+
+export const updatePlay = (body) => {
+    return useRequest({
+        url: "/video/play",
+        method: "put",
+        body
+    })
+}
