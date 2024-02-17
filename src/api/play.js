@@ -1,4 +1,5 @@
 import useRequest from "../hooks/useRequest/useRequest.js";
+import AxiosInstance from "@/hooks/useRequest/axiosInstance.js";
 
 export const getPlay = (params) => {
     return useRequest({
@@ -8,10 +9,10 @@ export const getPlay = (params) => {
     })
 }
 
-export const updatePlay = (body) => {
-    return useRequest({
+export const updatePlay = (data) => {
+    return AxiosInstance({
         url: "/video/play",
         method: "put",
-        body
+        data
     })
 }

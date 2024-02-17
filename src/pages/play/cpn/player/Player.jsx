@@ -16,9 +16,9 @@ const Player = () => {
 
     // 先更新
     updatePlay({
-        videoId: id,
-        playLine: sid,
-        episodeId: nid
+        videoId: Number(id),
+        playLine: Number(sid),
+        episodeId: Number(nid)
     });
 
     useEffect(()=>{
