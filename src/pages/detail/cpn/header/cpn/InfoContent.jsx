@@ -14,15 +14,15 @@ const InfoContent = () => {
             </div>
         </div>
         <div className={'flex pb-[5px] text-m'}>
-            <span className={'mr-[8px] font-bold'}>导演: </span>
+            <span className={'mr-[8px] font-bold text-nowrap'}>导演: </span>
             <div>{data?.director}</div>
         </div>
         <div className={'flex pb-[5px] text-m'}>
-            <span className={'mr-[8px] font-bold'}>编剧: </span>
+            <span className={'mr-[8px] font-bold text-nowrap'}>编剧: </span>
             <div>{data?.screenwriter}</div>
         </div>
         <div className={'flex pb-[5px] text-m'}>
-            <span className={'mr-[8px] font-bold'}>主演: </span>
+            <span className={'mr-[8px] font-bold text-nowrap'}>主演: </span>
             <div>
                 {data?.starrings?.map((item, index) =>
                     <span key={index}>
@@ -32,11 +32,11 @@ const InfoContent = () => {
             </div>
         </div>
         <div className={'flex pb-[5px] text-m'}>
-            <span className={'mr-[8px] font-bold'}>更新: </span>
+            <span className={'mr-[8px] font-bold text-nowrap'}>更新: </span>
             <div>{formatDate(data?.updateAt)}</div>
         </div>
         <div className={'flex pb-[5px] text-m'}>
-            <span className={'mr-[8px] font-bold'}>片长: </span>
+            <span className={'mr-[8px] font-bold text-nowrap'}>片长: </span>
             <div>{data?.note}</div>
         </div>
         {/*{data?.thirdlink?.title && <div className={'flex pb-[5px] text-m text-green-600'}>*/}
