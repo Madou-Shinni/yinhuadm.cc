@@ -14,15 +14,16 @@ const Item = (props) => {
     }
 
     return <div className={`
+    relative
     w-[calc(15%-10px)]
     max-2xl:w-[calc(30%-10px)]
     max-xl:w-[calc(45%-10px)]
     max-lg:w-[calc(60%-10px)]
     max-md:w-[calc(85%-10px)]
     max-sm:w-[calc(100%-10px)]
-    bg-[#fff] rounded-[8px] shadow p-[10px] relative min-w-[350px] mb-[50px]`}>
+    bg-[#fff] rounded-[8px] shadow p-[10px] min-w-[350px] mb-[50px]`}>
         {/* tag */}
-        <div className={`absolute right-0 top-[-25px] h-[40px] leading-[26px] text-s text-[#616161] bg-[#e9ecef] font-bold rounded-[8px] z-[-1] ${styles.tag}`}
+        <div className={`absolute right-0 top-[-25px] h-[40px] leading-[26px] text-s text-[#616161] bg-[#e9ecef] font-bold rounded-[8px] ${styles.tag}`}
             style={{
                 padding: '0 10px 0 2px',
             }}
@@ -30,7 +31,7 @@ const Item = (props) => {
             {props.tag}
         </div>
         {/*img*/}
-        <a className={'block float-left w-[120px] relative'} style={{
+        <a className={'float-left w-[120px] relative'} style={{
             margin: '-45px 0 10px 0', // 左上角
             marginRight: '10px'
         }}>
