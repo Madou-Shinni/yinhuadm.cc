@@ -22,8 +22,15 @@ const SearchBar = () => {
         setInputValue(e.target.value)
     }
 
+    const onKeyDown = (e) => {
+        if (e.keyCode === 13 && e.key === "Enter") {
+            // 处理回车键事件
+            onSearch(inputValue)
+        }
+    }
+
     return <div className={`relative px-[20px] container h-[45px] rounded-[8px] hover:bg-gray-200 ${focus ? 'bg-gray-200' : ''}`}>
-        <InputBase onKeyDown={()=>onSearch(inputValue)} onFocus={onFocus} onBlur={onBlur} onChange={onChange} className={'absolute top-1/2 -translate-y-1/2 w-full h-full'} placeholder={'Search'} />
+        <InputBase onKeyDown={onKeyDown} onFocus={onFocus} onBlur={onBlur} onChange={onChange} className={'absolute top-1/2 -translate-y-1/2 w-full h-full'} placeholder={'Search'} />
         <div className={`absolute top-1/2 -translate-y-1/2 right-2 w-[36px] h-[36px] flex items-center justify-center cursor-pointer
             rounded-[8px] ${focus ? 'bg-white' : ''}
         `}>

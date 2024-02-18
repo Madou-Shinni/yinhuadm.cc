@@ -4,10 +4,14 @@ import {getSearch} from "../../api/search.js";
 import Loading from "../base/loading/Loading.jsx";
 import ErrorBlock from "../base/error-block/ErrorBlock.jsx";
 import {useParams} from "react-router-dom";
+import {useEffect} from "react";
 
 const Search = () => {
     const keyword = useParams().keyword;
-    const {data,isLoading,error} = getSearch({keyword});
+    const {data,isLoading,error,mutate} = getSearch({keyword});
+    useEffect(() => {
+        mutate({keyword})
+    }, [keyword]);
     if (isLoading) return <Loading />;
     if (error) return <ErrorBlock/>;
     // console.log(data)

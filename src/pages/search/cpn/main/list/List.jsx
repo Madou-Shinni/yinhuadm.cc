@@ -7,7 +7,7 @@ const List = () => {
     const {data} = getSearch({keyword});
     return <div className={'flex'}>
         {
-            data?.list.map((item,index) => {
+            data?.list?.map((item,index) => {
                 return <Item key={item.id} cover={item.cover} note={item.note} tag={item.tags?.[0]} />
             })
         }
