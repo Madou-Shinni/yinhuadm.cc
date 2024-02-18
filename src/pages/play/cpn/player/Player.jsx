@@ -35,9 +35,9 @@ const Player = () => {
 
 
 
-    return <div className={'w-full h-[50vh] min-h-[300px] min-w-[360px] flex-grow'}>
+    return <div className={'w-full h-auto sm:min-h-[70vh] min-w-[360px] flex-grow'}>
         <iframe border="0" src={
-            `https://player.mcue.cc/yinhua/?url=${data?.url}&next=${!data.url_next ? '' : window.location.protocol + '//' + window.location.host + data?.link_next}&title=${video?.title+' - 第'+nid+'集'}`
+            `https://player.mcue.cc/yinhua/?url=${data?.url}&next=${data?.url_next ? '' : window.location.protocol + '//' + window.location.host + data?.link_next}&title=${video?.title+' - 第'+nid+'集'}`
         }
                 width="100%"
                 height="100%"
