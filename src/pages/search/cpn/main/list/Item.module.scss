@@ -1,0 +1,14 @@
+.tag {
+  &:before {
+    content: '';
+    position: absolute;
+    left: -13px;
+    top: 0;
+    background: #e9ecef;
+    border-radius: 8px;
+    width: 100%;
+    height: 100%;
+    transform: skewX(-20deg);
+    z-index: -1;
+  }
+}
