@@ -16,7 +16,7 @@ const Router = React.memo(()=>{
                 element: <Home/>,
             },
             {
-                path:'/search',
+                path:'/search/:keyword',
                 element: <Search/>
             },
             {

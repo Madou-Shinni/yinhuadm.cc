@@ -15,11 +15,14 @@ const Player = () => {
     const {data:video,isLoading:videoLoading} = getVideo({id});
 
     // 先更新
-    updatePlay({
-        videoId: Number(id),
-        playLine: Number(sid),
-        episodeId: Number(nid)
-    });
+    if (data?.url) {
+        updatePlay({
+            videoId: Number(id),
+            playLine: Number(sid),
+            episodeId: Number(nid),
+            playUrl: data.url
+        });
+    }
 
     useEffect(()=>{
         document.title = `${video?.title} - 第${nid}集`;
