@@ -1,7 +1,6 @@
 import Item from "./Item.jsx";
 import {useParams} from "react-router-dom";
 import {getSearchInfinite} from "../../../../../api/search.js";
-import {useEffect} from "react";
 import Loading from "../../../../base/loading/Loading.jsx";
 import ErrorBlock from "../../../../base/error-block/ErrorBlock.jsx";
 import {setTotal} from "../../../../../store/slices/search.js";
@@ -13,11 +12,8 @@ const List = () => {
     const dispatch = useDispatch();
     const {data,size,setSize,isValidating,isLoading,error} = getSearchInfinite({keyword});
 
-    useEffect(() => {
-        dispatch(setTotal(data?.[0].total));
-    }, [size]);
-
     const loadFunc = async () => {
+        dispatch(setTotal(data?.[0].total));
         if (isValidating) return;
         await setSize(size + 1);
     }

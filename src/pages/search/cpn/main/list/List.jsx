@@ -16,7 +16,6 @@ const List = () => {
     const isSmallScreen = useMediaQuery(theme => theme.breakpoints.down('sm'));
 
     useEffect(() => {
-        dispatch(setTotal(data?.total));
         mutate()
         window.scrollTo(0, 0);
     }, [page]);
@@ -25,6 +24,7 @@ const List = () => {
     if (error) return <ErrorBlock/>;
 
     const handlePageChange = (e,value) => {
+        dispatch(setTotal(data?.total));
         setPage(value);
     };
 
