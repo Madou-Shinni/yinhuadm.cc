@@ -6,12 +6,18 @@ import ErrorBlock from "../../../../base/error-block/ErrorBlock.jsx";
 import {setTotal} from "../../../../../store/slices/search.js";
 import {useDispatch} from "react-redux";
 import InfiniteScroll from "react-infinite-scroller";
+import {useEffect} from "react";
 
 const List = () => {
     const keyword = useParams().keyword;
     const dispatch = useDispatch();
     const {data,size,setSize,isValidating,isLoading,error} = getSearchInfinite({keyword});
-    dispatch(setTotal(data?.[0].total));
+
+    useEffect(()=>{
+        if (data) {
+            dispatch(setTotal(data?.[0].total));
+        }
+    },[data])
 
     const loadFunc = async () => {
         dispatch(setTotal(data?.[0].total));
