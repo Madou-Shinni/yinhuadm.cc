@@ -15,9 +15,7 @@ const Item = (props) => {
 
     return <div className={`
     relative
-    w-[calc(15%-10px)]
-    max-2xl:w-[calc(30%-10px)]
-    max-xl:w-[calc(45%-10px)]
+    w-[calc(33%-10px)]
     max-lg:w-[calc(60%-10px)]
     max-md:w-[calc(85%-10px)]
     max-sm:w-[calc(100%-10px)]
@@ -51,7 +49,7 @@ const Item = (props) => {
                     onClick={onPlay}
                 >
                     <PlayArrowRoundedIcon/>
-                    <span className={'2xl:hidden max-sm:hidden'}>立即播放</span>
+                    <span className={'max-sm:hidden sm:inline'}>立即播放</span>
                 </a>
                 <a className={'border border-solid border-[#f78ca0] px-[10px] py-[5px] rounded-[8px] cursor-pointer'}
                     onClick={onDetail}
