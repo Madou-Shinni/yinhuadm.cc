@@ -14,6 +14,7 @@ const List = () => {
     const dispatch = useDispatch();
     const {data,isLoading,error,mutate} = getSearch({keyword:keyword,pageNum:page,pageSize:10});
     const isSmallScreen = useMediaQuery(theme => theme.breakpoints.down('sm'));
+    dispatch(setTotal(data?.total));
 
     useEffect(() => {
         mutate()

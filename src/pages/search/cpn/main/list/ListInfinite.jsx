@@ -11,6 +11,7 @@ const List = () => {
     const keyword = useParams().keyword;
     const dispatch = useDispatch();
     const {data,size,setSize,isValidating,isLoading,error} = getSearchInfinite({keyword});
+    dispatch(setTotal(data?.[0].total));
 
     const loadFunc = async () => {
         dispatch(setTotal(data?.[0].total));
