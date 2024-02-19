@@ -21,6 +21,11 @@ const List = () => {
         window.scrollTo(0, 0);
     }, [page]);
 
+    useEffect(() => {
+        mutate()
+        window.scrollTo(0, 0);
+    }, [keyword]);
+
     if (isLoading) return <Loading />;
     if (error) return <ErrorBlock/>;
 
