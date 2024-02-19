@@ -44,5 +44,8 @@
 <div class="grid-container">
   <div class="grid-item"><img src="assets/home.jpg" alt="home"></div>
   <div class="grid-item"><img src="assets/detail.png" alt="detail"></div>
-  <div class="grid-item"><img src="image3.jpg" alt="Image 3"></div>
+  <div class="grid-item"><img src="assets/play.png" alt="play"></div>
+  <div class="grid-item"><img src="assets/play.png" alt="play"></div>
+  <div class="grid-item"><img src="assets/play.png" alt="play"></div>
+  <div class="grid-item"><img src="assets/play.png" alt="play"></div>
 </div>
