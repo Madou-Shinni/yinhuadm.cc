@@ -24,11 +24,11 @@
 ## 测试图片
 
 <div style="display: grid;grid-template-columns: repeat(3, 1fr);gap: 20px;">
-  <div style="border: 1px solid #ccc;padding: 10px;"><img src="./assets/home.png" alt="home"></div>
-  <div style="border: 1px solid #ccc;padding: 10px;"><img src="./assets/detail.png" alt="detail"></div>
-  <div style="border: 1px solid #ccc;padding: 10px;"><img src="./assets/play.png" alt="play"></div>
-  <div style="border: 1px solid #ccc;padding: 10px;"><img src="./assets/search.png" alt="search"></div>
-  <div style="border: 1px solid #ccc;padding: 10px;"><img src="./assets/home-mobile.png" alt="home-mobile"></div>
-  <div style="border: 1px solid #ccc;padding: 10px;"><img src="./assets/detail-mobile.png" alt="detail-mobile"></div>
-  <div style="border: 1px solid #ccc;padding: 10px;"><img src="./assets/search-mobile.png" alt="search-mobile"></div>
+  <div style="border: 1px solid #ccc;padding: 10px;"><img style="width: 100%;height: 100%;object-fit: cover;" src="./assets/home.png" alt="home"></div>
+  <div style="border: 1px solid #ccc;padding: 10px;"><img style="width: 100%;height: 100%;object-fit: cover;" src="./assets/detail.png" alt="detail"></div>
+  <div style="border: 1px solid #ccc;padding: 10px;"><img style="width: 100%;height: 100%;object-fit: cover;" src="./assets/play.png" alt="play"></div>
+  <div style="border: 1px solid #ccc;padding: 10px;grid-column: 1 / -1;"><img style="width: 100%;height: 100%;object-fit: cover;" src="./assets/search.png" alt="search"></div>
+  <div style="border: 1px solid #ccc;padding: 10px;"><img style="width: 100%;height: 100%;object-fit: cover;" src="./assets/home-mobile.png" alt="home-mobile"></div>
+  <div style="border: 1px solid #ccc;padding: 10px;"><img style="width: 100%;height: 100%;object-fit: cover;" src="./assets/detail-mobile.png" alt="detail-mobile"></div>
+  <div style="border: 1px solid #ccc;padding: 10px;"><img style="width: 100%;height: 100%;object-fit: cover;" src="./assets/search-mobile.png" alt="search-mobile"></div>
 </div>
