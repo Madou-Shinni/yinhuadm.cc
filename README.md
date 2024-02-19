@@ -45,7 +45,8 @@
   <div class="grid-item"><img src="assets/home.jpg" alt="home"></div>
   <div class="grid-item"><img src="assets/detail.png" alt="detail"></div>
   <div class="grid-item"><img src="assets/play.png" alt="play"></div>
-  <div class="grid-item"><img src="assets/play.png" alt="play"></div>
-  <div class="grid-item"><img src="assets/play.png" alt="play"></div>
-  <div class="grid-item"><img src="assets/play.png" alt="play"></div>
+  <div class="grid-item"><img src="assets/search.png" alt="search"></div>
+  <div class="grid-item"><img src="assets/home-mobile.png" alt="home-mobile"></div>
+  <div class="grid-item"><img src="assets/detail-mobile.png" alt="detail-mobile"></div>
+  <div class="grid-item"><img src="assets/search-mobile.png" alt="search-mobile"></div>
 </div>
