@@ -3,6 +3,7 @@
 ## 技术栈
 
 <h3>react18+redux+tailwindcss</h3>
+
 1. [x] react18
 2. [x] redux
 3. [x] react-router-dom
@@ -19,6 +20,7 @@
 3. [x] 支持(pc)分页和(mobile)无限加载
 
 ## 测试地址
+
 [樱花动漫](http://185.242.234.97:10002/)
 
 ## 测试图片
