@@ -22,37 +22,13 @@
 [樱花动漫](http://185.242.234.97:10002/)
 
 ## 测试图片
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>README.md</title>
-    <style>
-      .grid-container {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr); /* 三列布局，每列宽度相同 */
-        gap: 20px; /* 格子之间的间距 */
-      }
-      .grid-item {
-        border: 1px solid #ccc; /* 边框样式 */
-        padding: 10px; /* 内边距 */
-      }
-      .grid-item img {
-        width: 100%; /* 图片宽度填满格子 */
-        height: auto; /* 高度自适应 */
-      }
-    </style>
-  </head>
-  <body>
-    <div class="grid-container">
-      <div class="grid-item"><img src="./assets/home.png" alt="home"></div>
-      <div class="grid-item"><img src="./assets/detail.png" alt="detail"></div>
-      <div class="grid-item"><img src="./assets/play.png" alt="play"></div>
-      <div class="grid-item"><img src="./assets/search.png" alt="search"></div>
-      <div class="grid-item"><img src="./assets/home-mobile.png" alt="home-mobile"></div>
-      <div class="grid-item"><img src="./assets/detail-mobile.png" alt="detail-mobile"></div>
-      <div class="grid-item"><img src="./assets/search-mobile.png" alt="search-mobile"></div>
-    </div>
-  </body>
-</html>
+
+<div style="display: grid;grid-template-columns: repeat(3, 1fr);gap: 20px;">
+  <div style="border: 1px solid #ccc;padding: 10px;"><img src="./assets/home.png" alt="home"></div>
+  <div style="border: 1px solid #ccc;padding: 10px;"><img src="./assets/detail.png" alt="detail"></div>
+  <div style="border: 1px solid #ccc;padding: 10px;"><img src="./assets/play.png" alt="play"></div>
+  <div style="border: 1px solid #ccc;padding: 10px;"><img src="./assets/search.png" alt="search"></div>
+  <div style="border: 1px solid #ccc;padding: 10px;"><img src="./assets/home-mobile.png" alt="home-mobile"></div>
+  <div style="border: 1px solid #ccc;padding: 10px;"><img src="./assets/detail-mobile.png" alt="detail-mobile"></div>
+  <div style="border: 1px solid #ccc;padding: 10px;"><img src="./assets/search-mobile.png" alt="search-mobile"></div>
+</div>
