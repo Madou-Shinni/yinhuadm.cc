@@ -1,3 +1,4 @@
+import useInfiniteRequest from "../hooks/useRequest/useInfiniteRequest.js";
 import useRequest from "../hooks/useRequest/useRequest.js";
 
 export const getSearch = (params) => {
@@ -5,5 +6,12 @@ export const getSearch = (params) => {
         url: "/video/list",
         method: "get",
         params
+    })
+}
+
+export const getSearchInfinite = (params) => {
+    return useInfiniteRequest({
+        url: `/video/list?keyword=${params.keyword}`,
+        method: "get"
     })
 }

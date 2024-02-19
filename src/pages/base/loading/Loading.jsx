@@ -7,9 +7,9 @@ const override = css`
   border-color: red;
 `;
 
-const Loading = () => {
-    return <div className="flex items-center justify-center w-screen h-screen">
-        <PacmanLoader css={override} size={15} color={'#333333'} />
+const Loading = (props) => {
+    return <div className={`flex items-center justify-center w-screen h-screen ${props.className ? props.className : ''}`}>
+        <PacmanLoader css={override} size={15} color={'#f78ca0'} />
     </div>
 }
 

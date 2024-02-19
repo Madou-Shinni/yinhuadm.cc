@@ -19,7 +19,7 @@ const Item = (props) => {
     max-lg:w-[calc(60%-10px)]
     max-md:w-[calc(85%-10px)]
     max-sm:w-[calc(100%-10px)]
-    bg-[#fff] rounded-[8px] shadow p-[10px] min-w-[250px] mb-[50px]`}>
+    bg-[#fff] rounded-[8px] shadow p-[10px] min-w-[250px]`}>
         {/* tag */}
         <div className={`absolute right-0 top-[-25px] h-[40px] leading-[26px] text-s text-[#616161] bg-[#e9ecef] font-bold rounded-[8px] ${styles.tag}`}
             style={{
@@ -35,14 +35,14 @@ const Item = (props) => {
         }}>
             <div className={'relative  pt-[140%]'}>
                 <div className={'note absolute left-0 bottom-0 right-0 z-10 text-white text-center text-s'}>{props.note}</div>
-                <div className={'cover w-full h-full'}>
+                <div className={'cover w-full h-full cursor-pointer'} onClick={onDetail}>
                     <img src={props.cover} alt="" className={'object-cover absolute top-0 left-0 rounded-[14px]'}/>
                 </div>
             </div>
         </a>
         {/*content*/}
         <div className={'content-wrapper h-full flex flex-col'}>
-            <div className={'title text-2xl font-bold text-nowrap overflow-hidden'}>{props.title}</div>
+            <div className={'title text-2xl font-bold text-nowrap overflow-hidden cursor-pointer'} onClick={onDetail}>{props.title}</div>
             <div className={'content text-m text-gray-400 two-lines-ellipsis'}>{props.introduction}</div>
             <div className={'button mt-auto flex gap-[10px]'}>
                 <a className={'bg-[#f78ca0] rounded-[8px] px-[3px] py-[5px] text-center text-[#fff] cursor-pointer'}

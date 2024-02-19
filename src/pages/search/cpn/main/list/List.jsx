@@ -29,7 +29,7 @@ const List = () => {
     };
 
     return <div className={'flex flex-col justify-center items-center'}>
-        <div className={'flex flex-wrap gap-[10px] justify-start mt-[30px] max-sm:justify-center'}>
+        <div className={'flex flex-wrap gap-y-[50px] gap-x-[10px] justify-start mt-[30px] max-sm:justify-center'}>
             {
                 data?.list?.map((item,index) => {
                     return <Item key={item.id} id={item.id} cover={item.cover} note={item.note} tag={item.tags?.[0]} title={item.title} introduction={item.introduction} />

@@ -2,7 +2,8 @@ import useSWRInfinite from "swr/infinite";
 import AxiosInstance from "./axiosInstance.js";
 
 function getKey(pageIndex, url) {
-    return `${url}?pageIndex=${pageIndex + 1}`;
+    console.log(url)
+    return `${url}&pageNum=${pageIndex+1}&pageSize=${10}`;
 }
 
 function useInfiniteRequest(request, config) {
