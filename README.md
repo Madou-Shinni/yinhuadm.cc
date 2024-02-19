@@ -1,8 +1,48 @@
-# React + Vite
+# 樱花动漫
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 技术栈
 
-Currently, two official plugins are available:
+<h3>react18+redux+tailwindcss</h3>
+1. [x] react18
+2. [x] redux
+3. [x] react-router-dom
+4. [x] axios+swr
+5. [x] react-infinite-scroller
+6. [x] tailwindcss + mui
+7. [x] swiper
+8. [x] sass
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 特点
+
+1. [x] 响应式pc和mobile
+2. [x] 支持分词搜索
+3. [x] 支持(pc)分页和(mobile)无限加载
+
+## 测试地址
+[樱花动漫](http://185.242.234.97:10002/)
+
+## 测试图片
+
+<style>
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 三列布局，每列宽度相同 */
+    gap: 20px; /* 格子之间的间距 */
+  }
+
+  .grid-item {
+    border: 1px solid #ccc; /* 边框样式 */
+    padding: 10px; /* 内边距 */
+  }
+
+  .grid-item img {
+    width: 100%; /* 图片宽度填满格子 */
+    height: auto; /* 高度自适应 */
+  }
+</style>
+
+<div class="grid-container">
+  <div class="grid-item"><img src="assets/home.jpg" alt="home"></div>
+  <div class="grid-item"><img src="assets/detail.png" alt="detail"></div>
+  <div class="grid-item"><img src="image3.jpg" alt="Image 3"></div>
+</div>
