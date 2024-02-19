@@ -51,7 +51,7 @@ const Item = (props) => {
                     onClick={onPlay}
                 >
                     <PlayArrowRoundedIcon/>
-                    <span className={'max-sm:hidden'}>立即播放</span>
+                    <span className={'2xl:hidden max-sm:hidden'}>立即播放</span>
                 </a>
                 <a className={'border border-solid border-[#f78ca0] px-[10px] py-[5px] rounded-[8px] cursor-pointer'}
                     onClick={onDetail}
