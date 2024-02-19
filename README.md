@@ -23,22 +23,20 @@
 
 [樱花动漫](http://185.242.234.97:10002/)
 
-## 测试图片
+## 运行截图
 
-<div style="display: grid;grid-template-columns: repeat(3, 1fr);gap: 20px;">
+| ![search](./assets/search.png) |
+|-----------------------------|
 
-  <div style="border: 1px solid #ccc;padding: 10px;"><img style="width: 100%;height: 100%;object-fit: cover;" src="./assets/home.png" alt="home"></div>
+| ![home](./assets/home.png) | ![detail](./assets/detail.png) | ![play](./assets/play.png) |
+|-----------------------------|---------------------------------|-----------------------------|
 
-  <div style="border: 1px solid #ccc;padding: 10px;"><img style="width: 100%;height: 100%;object-fit: cover;" src="./assets/detail.png" alt="detail"></div>
+| ![home-mobile](./assets/home-mobile.png) | ![detail-mobile](./assets/detail-mobile.png) | ![search-mobile](./assets/search-mobile.png) |
+|-----------------------------|---------------------------------|-----------------------------|
 
-  <div style="border: 1px solid #ccc;padding: 10px;"><img style="width: 100%;height: 100%;object-fit: cover;" src="./assets/play.png" alt="play"></div>
+## 免责声明
 
-  <div style="border: 1px solid #ccc;padding: 10px;grid-column: 1 / -1;"><img style="width: 100%;height: 100%;object-fit: cover;" src="./assets/search.png" alt="search"></div>
-
-  <div style="border: 1px solid #ccc;padding: 10px;"><img style="width: 100%;height: 100%;object-fit: cover;" src="./assets/home-mobile.png" alt="home-mobile"></div>
-
-  <div style="border: 1px solid #ccc;padding: 10px;"><img style="width: 100%;height: 100%;object-fit: cover;" src="./assets/detail-mobile.png" alt="detail-mobile"></div>
-
-  <div style="border: 1px solid #ccc;padding: 10px;"><img style="width: 100%;height: 100%;object-fit: cover;" src="./assets/search-mobile.png" alt="search-mobile"></div>
-
-</div>
+1. 此软件**只提供数据显示**，**不提供原始数据**。
+2. 此软件显示的所有内容，其**版权**均**归原作者**所有。
+3. 此软件**仅可用作学习交流**，未经授权，**禁止用于其他用途**，请在下载**24小时内删除**。
+4. 因使用此软件产生的版权问题，软件作者概不负责。
