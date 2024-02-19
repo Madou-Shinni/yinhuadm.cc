@@ -21,7 +21,7 @@ const Item = (props) => {
     max-lg:w-[calc(60%-10px)]
     max-md:w-[calc(85%-10px)]
     max-sm:w-[calc(100%-10px)]
-    bg-[#fff] rounded-[8px] shadow p-[10px] min-w-[350px] mb-[50px]`}>
+    bg-[#fff] rounded-[8px] shadow p-[10px] min-w-[250px] mb-[50px]`}>
         {/* tag */}
         <div className={`absolute right-0 top-[-25px] h-[40px] leading-[26px] text-s text-[#616161] bg-[#e9ecef] font-bold rounded-[8px] ${styles.tag}`}
             style={{
@@ -51,7 +51,7 @@ const Item = (props) => {
                     onClick={onPlay}
                 >
                     <PlayArrowRoundedIcon/>
-                    <span>立即播放</span>
+                    <span className={'max-sm:hidden'}>立即播放</span>
                 </a>
                 <a className={'border border-solid border-[#f78ca0] px-[10px] py-[5px] rounded-[8px] cursor-pointer'}
                     onClick={onDetail}
