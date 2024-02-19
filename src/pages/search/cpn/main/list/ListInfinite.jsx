@@ -33,7 +33,7 @@ const List = () => {
                 pageStart={0}
                 loadMore={loadFunc}
                 hasMore={hasMore}
-                loader={<Loading className={'mt-[10px] h-[10px]'} key={0} />}
+                loader={<Loading className={'mt-[10px] h-[10px!important]'} key={0} />}
             >
                 <div className={'flex flex-col gap-y-[50px] justify-center'}>
                     {
