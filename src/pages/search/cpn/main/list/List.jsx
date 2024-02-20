@@ -14,7 +14,6 @@ const List = () => {
     const dispatch = useDispatch();
     const {data,isLoading,error,mutate} = getSearch({keyword:keyword,pageNum:page,pageSize:10});
     const isSmallScreen = useMediaQuery(theme => theme.breakpoints.down('sm'));
-    dispatch(setTotal(data?.total));
 
     useEffect(() => {
         mutate()
@@ -26,11 +25,16 @@ const List = () => {
         window.scrollTo(0, 0);
     }, [keyword]);
 
+    useEffect(()=>{
+        if (data) {
+            dispatch(setTotal(data?.total));
+        }
+    },[data])
+
     if (isLoading) return <Loading />;
     if (error) return <ErrorBlock/>;
 
     const handlePageChange = (e,value) => {
-        dispatch(setTotal(data?.total));
         setPage(value);
     };
 
@@ -42,7 +46,7 @@ const List = () => {
                 })
             }
         </div>
-        <Pagination count={Math.ceil(data?.total / 10)}
+        <Pagination count={Math.ceil((data?.total  ? data.total : 0) / 10)}
                     page={page}
                     onChange={handlePageChange}
                     size={isSmallScreen ? 'small' : 'medium'}
