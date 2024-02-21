@@ -46,7 +46,9 @@ const List = () => {
                 })
             }
         </div>
-        <Pagination count={Math.ceil((data?.total  ? data.total : 0) / 10)}
+        <Pagination
+                    style={{marginTop: '20px'}}
+                    count={Math.ceil((data?.total  ? data.total : 0) / 10)}
                     page={page}
                     onChange={handlePageChange}
                     size={isSmallScreen ? 'small' : 'medium'}
