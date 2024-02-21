@@ -21,7 +21,9 @@ const List = () => {
     }, [page]);
 
     useEffect(() => {
-        mutate()
+        // 搜索重置之后分页至初始状态
+        setPage(1)
+        mutate({keyword:keyword,pageNum:page,pageSize:10})
         window.scrollTo(0, 0);
     }, [keyword]);
 
