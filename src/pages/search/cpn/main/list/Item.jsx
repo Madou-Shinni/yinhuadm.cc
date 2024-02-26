@@ -1,6 +1,7 @@
 import styles from './Item.module.scss';
 import PlayArrowRoundedIcon from "@mui/icons-material/PlayArrowRounded.js";
 import {useNavigate} from "react-router-dom";
+import parse from 'html-react-parser';
 
 const Item = (props) => {
     const navigate = useNavigate();
@@ -42,8 +43,8 @@ const Item = (props) => {
         </a>
         {/*content*/}
         <div className={'content-wrapper h-full flex flex-col'}>
-            <div className={'title text-2xl font-bold text-nowrap overflow-hidden cursor-pointer'} onClick={onDetail}>{props.title}</div>
-            <div className={'content text-m text-gray-400 two-lines-ellipsis'}>{props.introduction}</div>
+            <div className={'title text-2xl font-bold text-nowrap overflow-hidden cursor-pointer'} onClick={onDetail}>{parse(props.title)}</div>
+            <div className={'content text-m text-gray-400 two-lines-ellipsis'}>{parse(props.introduction)}</div>
             <div className={'button mt-auto flex gap-[10px]'}>
                 <a className={'bg-[#f78ca0] rounded-[8px] px-[3px] py-[5px] text-center text-[#fff] cursor-pointer'}
                     onClick={onPlay}
